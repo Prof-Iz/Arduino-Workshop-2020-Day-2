@@ -8,7 +8,7 @@ r = sr.Recognizer()
 while (True):
     with sr.Microphone() as source:
         print("Enter a command")
-        audio = r.listen(source)
+        audio = r.listen(source,phrase_time_limit= 3.0)
         print("time Ran out")
 
     try:
